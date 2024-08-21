@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:king/core/constants/app_icons.dart';
 import 'package:king/core/extensions/align_ext_on_widget.dart';
@@ -44,13 +43,13 @@ class _DetailNewsScreenState extends State<DetailNewsScreen> {
                   ),
                 ),
               ).paddingOnly(bottom: 10).align(Alignment.centerLeft),
-              ListView(padding: const EdgeInsets.symmetric(vertical: 20),
+              ListView(
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(24),
-                    child: CachedNetworkImage(
-                      imageUrl: widget.item.imageUrl,
-                      cacheKey: widget.item.imageUrl,
+                    child: Image.network(
+                      widget.item.imageUrl,
                       width: double.maxFinite,
                     ),
                   ).paddingOnly(bottom: 20),

@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:king/app/global_navigator/global_navigator.dart';
 import 'package:king/core/extensions/expanded_ext_on_widget.dart';
@@ -33,9 +32,8 @@ class NewsItem extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(14),
-              child: CachedNetworkImage(
-                imageUrl: item.imageUrl,
-                cacheKey: item.imageUrl,
+              child: Image.network(
+                item.imageUrl,
                 height: double.maxFinite,
                 fit: BoxFit.cover,
               ),
