@@ -2,7 +2,6 @@ import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:appsflyer_sdk/appsflyer_sdk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:in_app_review/in_app_review.dart';
 
 class Scnren extends StatefulWidget {
   final String njfkds;
@@ -23,7 +22,6 @@ class _ScnrenState extends State<Scnren> {
   late AppsflyerSdk _appsflyerSdk;
   String adId = '';
   String paramsFirst = '';
-  final InAppReview inAppReview = InAppReview.instance;
   String paramsSecond = '';
   Map _deepLinkData = {};
   Map _gcd = {};
